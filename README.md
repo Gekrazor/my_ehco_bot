@@ -6,6 +6,7 @@
 
 ## General info
 This project is simple echo bot, actually my first little project.
+![echobot](https://user-images.githubusercontent.com/85807730/125198939-b2db6480-e26c-11eb-97e7-437bed2b8339.jpg)
 	
 ## Technologies
 Project is created with:
