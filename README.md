@@ -22,5 +22,5 @@ windows - https://desktop.telegram.org/
 mac - https://macos.telegram.org/
 write to bot:
 find @username of your bot
-use comman /start
+use command /start
 ```
