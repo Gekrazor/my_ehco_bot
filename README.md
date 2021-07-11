@@ -5,7 +5,7 @@
 * [Setup](#setup)
 
 ## General info
-This project is simple echo bot, actualy my first little project.
+This project is simple echo bot, actually my first little project.
 	
 ## Technologies
 Project is created with:
