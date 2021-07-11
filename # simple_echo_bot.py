@@ -1,22 +1,29 @@
 # simple_echo_bot
 import telebot
-from telebot.types import Message
+
 
 # token
-bot = telebot.TeleBot("1741018950:AAHNc5Tz3qbCbPpHMtb3jke1ZYw_NRy3768", parse_mode=None)
+bot = telebot.TeleBot("", parse_mode=None)
 
-# commands
+# message commands
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-	bot.reply_to(message, "Greetings! \nUse this commands for more /help /gowild \nOr just lets play in ECHO!")
+	sti_greetings = open('pictures/greetings.webp', 'rb')
+	bot.send_sticker(message.chat.id, sti_greetings)
+	bot.send_message(message.chat.id, "Greetings! \nUse this commands for more /help /gowild \nOr just lets play in ECHO!")
 
 @bot.message_handler(commands=['help'])
 def send_wild(message):
-	bot.reply_to(message, "No help for you here, punk.")
+	sti_no_help = open('pictures/no_help.webp', 'rb')
+	bot.send_sticker(message.chat.id, sti_no_help)
+	bot.send_message(message.chat.id, "No help for you here, punk.")
 
 @bot.message_handler(commands=['gowild'])
 def send_wild(message):
-	bot.reply_to(message, "MONKE!!! UHUHUHAHAHAH AHUHUHUHAHH")
+	pic_monke = open('pictures/monke.jpg', 'rb')
+	bot.send_sticker(message.chat.id, pic_monke)
+	bot.send_message(message.chat.id, "MONKE!!! UHUHUHAHAHAH AHUHUHUHAHH")
+
 
 # echo messages
 @bot.message_handler(func=lambda m: True)
